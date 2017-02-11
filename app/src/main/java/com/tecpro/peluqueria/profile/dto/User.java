@@ -10,6 +10,7 @@ public class User implements Serializable {
     public final String status;
     public final String role;
     public final String phone;
+    public final String pass;
 
     private User(Builder builder) {
         this.id = builder.id;
@@ -17,6 +18,7 @@ public class User implements Serializable {
         this.status = builder.status;
         this.role = builder.role;
         this.phone = builder.phone;
+        this.pass = builder.pass;
     }
 
 
@@ -28,6 +30,7 @@ public class User implements Serializable {
         private String status;
         private String role;
         private String phone;
+        private String pass;
 
         public Builder withId(String id) {
             this.id = id;
@@ -51,6 +54,11 @@ public class User implements Serializable {
 
         public Builder withPhone(String phone) {
             this.phone = phone;
+            return this;
+        }
+
+        public Builder withPass(String pass) {
+            this.pass = pass;
             return this;
         }
 

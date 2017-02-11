@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">Shoes Happiness</string>
+    <string name="app_name">La Mejor peluqueria del condado</string>
+    <string name="title_activity_home">Mis reservas</string>
+
+    <string name="navigation_drawer_open"></string>
+    <string name="navigation_drawer_close"></string>
+
+    <string name="action_settings">Settings</string>
 </resources>

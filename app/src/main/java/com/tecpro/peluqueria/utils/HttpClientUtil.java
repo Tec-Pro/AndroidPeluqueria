@@ -3,6 +3,8 @@ package com.tecpro.peluqueria.utils;
 import android.content.Context;
 import android.util.Log;
 
+import com.google.gson.Gson;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
@@ -48,13 +50,14 @@ public class HttpClientUtil {
                     long t1 = System.nanoTime();
                     Log.d("OKHTTP", String.format("Sending request %s on %s%n%s",
                             request.url(), chain.connection(), request.headers()));
+                    Log.d("BODY", new Gson().toJson(request.body()));
 
                     Response response = chain.proceed(request);
 
                     long t2 = System.nanoTime();
                     Log.d("OKHTTP", String.format("Received response for %s in %.1fms%n%s",
                             response.request().url(), (t2 - t1) / 1e6d, response.headers()));
-
+                    Log.d("BODY", new Gson().toJson(response));
                     return response;
                 }
             };

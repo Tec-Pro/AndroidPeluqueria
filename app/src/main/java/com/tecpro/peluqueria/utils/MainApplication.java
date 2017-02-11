@@ -1,16 +1,13 @@
-package com.tecpro.peluqueria.profile.activities;
+package com.tecpro.peluqueria.utils;
 
 import android.app.Application;
 
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.GsonBuilder;
-import com.tecpro.peluqueria.utils.HttpClientUtil;
-import com.tecpro.peluqueria.utils.RestAdapter;
 
 import java.util.ArrayList;
 
 import retrofit2.CallAdapter;
-import retrofit2.Converter;
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 import rx.schedulers.Schedulers;
